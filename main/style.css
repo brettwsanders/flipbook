@@ -1,5 +1,31 @@
-#container { 
-  position: relative;
+h1 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+div .main-container { 
+  border: 1px solid black;
+}
+
+div .top-buttons-container {
+  display: block;
+  width: 400px;
+}
+
+button .save-frame {
+
+}
+
+button .clear-frame {
+
+}
+
+button .see-all-frames {
+
+}
+
+div .frames-saved {
+  float: right;
 }
 
 #frameView {
@@ -15,25 +41,17 @@
   margin: 0 auto;
 }
 
-#top-buttons-container {
-  display: block;
-  width: 400px;
-}
 
 #bottom-buttons-container {
   display: block;
   width: 400px;
 }
 
-#frames-saved-div {
-  float: right;
-}
-
 #resetButton {
   float:right;
 }
 
-#view-saved-frames {
+span .saved-frames-count {
   width: 400px;
 }
 

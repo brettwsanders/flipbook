@@ -6,17 +6,15 @@
   <title>Flipbook!</title>
 </head>
 <body>
-  <div id="container">
-    <div id="logo-container">
-      <img src='flipbook-logo.png' width="250px">
-    </div>
-    <div id="top-buttons-container">
-      <button id="saveFrame">Save Frame</button>
-      <button id="clearFrame">Clear Frame</button>
-      <button id="see-all-frames">See All Frames</button>
-      <div id="frames-saved-div">
+  <div class="main-container">
+  <h1>Flipbook</h1>
+    <div class="top-buttons-container">
+      <button class="save-frame">Save Frame</button>
+      <button class="clear-frame">Clear Frame</button>
+      <button class="see-all-frames">See All Frames</button>
+      <div class="frames-saved">
         <span>Frames Saved: </span>
-        <span id="count-saved-frames">0</span>
+        <span class="saved-frames-count">0</span>
       </div>
     </div>
     <canvas id="frameView" width="400" height="400">
@@ -32,7 +30,7 @@
   <br><br>
   <div id="view-saved-frames">
   </div>
-  <script src='bower_components/jquery/dist/jquery.js'></script>
-  <script src='main.js'></script>
+  <script src='lib/jquery.js'></script>
+  <script src='app.js'></script>
 </body>
 </html>
