@@ -1,53 +1,61 @@
+body {
+  background-color: #4099FF;
+}
+
 h1 {
   font-family: Arial, sans-serif;
   text-align: center;
+  color: #FFF;
+  text-shadow: 1px 1px #999;
 }
 
-div .main-container { 
-  border: 1px solid black;
+div {
+  /*border: 1px solid red;*/
 }
 
-div .top-buttons-container {
-  display: block;
-  width: 400px;
-}
-
-button .save-frame {
+div.main-container { 
 
 }
 
-button .clear-frame {
-
-}
-
-button .see-all-frames {
-
-}
-
-div .frames-saved {
-  float: right;
-}
-
-.drawing-pad {
-  border: 1px solid #000;
-}
-
-#logo-container {
-  width: 400px;
-}
-
-#logo-container img {
-  display: block;
+div.top-buttons-container {
   margin: 0 auto;
-}
-
-
-#bottom-buttons-container {
-  display: block;
   width: 400px;
 }
 
-#resetButton {
+button.save-frame {
+
+}
+
+button.clear-frame {
+
+}
+
+button.see-all-frames {
+
+}
+
+div.frames-saved-textbox {
+  float: right; 
+}
+
+div.drawing-pad-container {
+  margin: 0 auto;
+  width: 400px;
+}
+
+canvas.drawing-pad {
+  border: 1px solid #999;
+  text-align: center;
+  background-color: #FFF;
+
+}
+
+div.bottom-buttons-container {
+  margin: 0 auto;
+  width: 400px;
+}
+
+button.reset {
   float:right;
 }
 
@@ -55,6 +63,6 @@ span .saved-frames-count {
   width: 400px;
 }
 
-#view-saved-frames img {
+.view-saved-frames img {
   border: 1px solid black;
 }

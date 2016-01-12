@@ -125,15 +125,15 @@ $('button.save-frame').on('click', function() {
   image.src = canvas.toDataURL("image/png");
   framesSaved++;
   localStorage.setItem("frame" + framesSaved, image.src);
-  $('#view-saved-frames').append('<img src=' + image.src + '>');
-  $('#count-saved-frames').text(framesSaved);
+  $('.view-saved-frames').append('<img src=' + image.src + '>');
+  $('saved-frames-count').text(framesSaved);
   setPreviousFrame();
   saveToAllFrames();
   clearCurrentFrame();
   redraw(previousFrame, '#FF9999');
 });
 
-$('#playButton').on('click', function() {
+$('button.play').on('click', function() {
   if (framesSaved <= 0) {
     alert('You haven\'t saved any frames!');
     return;
@@ -142,26 +142,26 @@ $('#playButton').on('click', function() {
   playInterval = window.setInterval(play, speed);
 });
 
-$('#resetButton').on('click', function() {
+$('button.reset').on('click', function() {
   clearInterval(playInterval);
   clearCurrentFrame();
   currentFrameID = 1;
   framesSaved = 0;
-  $('#count-saved-frames').text(framesSaved);
-  $('#view-saved-frames').empty();
+  $('.count-saved-frames').text(framesSaved);
+  $('.view-saved-frames').empty();
 });
 
 
-$('#pauseButton').on('click', function() {
+$('button.pause').on('click', function() {
   clearInterval(playInterval);
 });
 
-$('#clearFrame').on('click', function() {
+$('button.clear-frame').on('click', function() {
   clearCurrentFrame();
   redraw(previousFrame, '#FF9999');
 });
 
-$('#see-all-frames').on('click', function() {
+$('button.see-all-frames').on('click', function() {
   if (framesSaved <= 0) {
     alert('You haven\'t saved any frames!');
     return;

@@ -12,23 +12,25 @@
       <button class="save-frame">Save Frame</button>
       <button class="clear-frame">Clear Frame</button>
       <button class="see-all-frames">See All Frames</button>
-      <div class="frames-saved">
+      <div class="frames-saved-textbox">
         <span>Frames Saved: </span>
         <span class="saved-frames-count">0</span>
       </div>
     </div>
-    <canvas class="drawing-pad" width="400" height="400">
-      <p>You're browser doesn't support this web application :(</p>
-    </canvas>
-    <div id="bottom-buttons-container">
-      <button id="playButton">Play!</button>
-      <button id="pauseButton">Pause</button>
+    <div class="drawing-pad-container">
+      <canvas class="drawing-pad" width="400" height="400">
+        <p>You're browser doesn't support this web application :(</p>
+      </canvas>
+    </div>
+    <div class="bottom-buttons-container">
+      <button class="play">Play!</button>
+      <button class="pause">Pause</button>
       <input name="speed" type="text" id="speed" value="100">
-      <button id="resetButton">Reset</button>
+      <button class="reset">Reset</button>
     </div>
   </div>
   <br><br>
-  <div id="view-saved-frames">
+  <div class="view-saved-frames">
   </div>
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="app.js"></script>
