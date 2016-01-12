@@ -1,4 +1,4 @@
-var canvas = document.getElementById('frameView');
+var canvas = document.getElementsByClassName('drawing-pad')[0];
 var context = canvas.getContext("2d");
 
 //information for current frame
@@ -35,14 +35,14 @@ var addClick = function (x, y, dragging) {
 var redraw = function (frame, style) {
   // context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
   context.strokeStyle = style || '#000000';
-  context.lineJoin = "round";
+  context.lineJoin = 'round';
   context.lineWidth = 7;
       
-  for(var i=0; i < frame.clickX.length; i++) {  
+  for (var i=0; i < frame.clickX.length; i++) {  
     context.beginPath();
-    if(frame.clickDrag[i] && i){
+    if (frame.clickDrag[i] && i) {
       context.moveTo(frame.clickX[i-1], frame.clickY[i-1]);
-     }else{
+     } else{
        context.moveTo(frame.clickX[i]-1, frame.clickY[i]);
      }
      context.lineTo(frame.clickX[i], frame.clickY[i]);
@@ -92,7 +92,7 @@ var rgbToHex = function(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 };
 
-$('#frameView').mousedown(function(e){
+$('.drawing-pad').mousedown(function(e){
 
   var mouseX = e.pageX - this.offsetLeft;
   // var mouseY = e.pageY - this.offsetTop;
@@ -103,22 +103,22 @@ $('#frameView').mousedown(function(e){
   redraw(currentFrame);
 });
 
-$('#frameView').mousemove(function(e){
+$('.drawing-pad').mousemove(function(e){
   if(paint){
     addClick(e.pageX - this.offsetLeft - 9, e.pageY - this.offsetTop - 12, true);
     redraw(currentFrame);
   }
 });
 
-$('#frameView').mouseup(function(e){
+$('.drawing-pad').mouseup(function(e){
   paint = false;
 });
 
-$('#frameView').mouseleave(function(e){
+$('.drawing-pad').mouseleave(function(e){
   paint = false;
 });
 
-$('#saveFrame').on('click', function() {
+$('button.save-frame').on('click', function() {
   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
   redraw(currentFrame);
   var image = new Image();

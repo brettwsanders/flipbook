@@ -28,7 +28,7 @@ div .frames-saved {
   float: right;
 }
 
-#frameView {
+.drawing-pad {
   border: 1px solid #000;
 }
 
