@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>Flipbook!</title>
+</head>
+<body>
+  <div id="container">
+    <div id="logo-container">
+      <img src='flipbook-logo.png' width="250px">
+    </div>
+    <div id="top-buttons-container">
+      <button id="saveFrame">Save Frame</button>
+      <button id="clearFrame">Clear Frame</button>
+      <button id="see-all-frames">See All Frames</button>
+      <div id="frames-saved-div">
+        <span>Frames Saved: </span>
+        <span id="count-saved-frames">0</span>
+      </div>
+    </div>
+    <canvas id="frameView" width="400" height="400">
+      <p>You're browser doesn't support this web application :(</p>
+    </canvas>
+    <div id="bottom-buttons-container">
+      <button id="playButton">Play!</button>
+      <button id="pauseButton">Pause</button>
+      <input name="speed" type="text" id="speed" value="100">
+      <button id="resetButton">Reset</button>
+    </div>
+  </div>
+  <br><br>
+  <div id="view-saved-frames">
+  </div>
+  <script src='bower_components/jquery/dist/jquery.js'></script>
+  <script src='main.js'></script>
+</body>
+</html>

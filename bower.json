@@ -1,0 +1,24 @@
+{
+  "name": "2015-08-mvp",
+  "version": "1",
+  "homepage": "https://github.com/brettwsanders/2015-08-mvp",
+  "authors": [
+    "Brett Sanders <bsand08@gmail.com>"
+  ],
+  "description": "mvp",
+  "main": "index.html",
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

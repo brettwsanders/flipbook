@@ -1,0 +1,42 @@
+#container { 
+  position: relative;
+}
+
+#frameView {
+  border: 1px solid #000;
+}
+
+#logo-container {
+  width: 400px;
+}
+
+#logo-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+#top-buttons-container {
+  display: block;
+  width: 400px;
+}
+
+#bottom-buttons-container {
+  display: block;
+  width: 400px;
+}
+
+#frames-saved-div {
+  float: right;
+}
+
+#resetButton {
+  float:right;
+}
+
+#view-saved-frames {
+  width: 400px;
+}
+
+#view-saved-frames img {
+  border: 1px solid black;
+}
