@@ -63,6 +63,12 @@ span .saved-frames-count {
   width: 400px;
 }
 
+div.view-saved-frames {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+
 .view-saved-frames img {
   border: 1px solid black;
 }
