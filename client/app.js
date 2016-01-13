@@ -125,7 +125,10 @@ $('button.save-frame').on('click', function() {
   image.src = canvas.toDataURL("image/png");
   framesSaved++;
   localStorage.setItem("frame" + framesSaved, image.src);
-  $('.view-saved-frames').append('<img src=' + image.src + '>');
+  var preview = $('<div></div>');
+  preview.addClass('preview');
+  preview.append('<img src=' + image.src + '>');
+  $('.view-saved-frames').append(preview);
   $('saved-frames-count').text(framesSaved);
   setPreviousFrame();
   saveToAllFrames();
