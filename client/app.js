@@ -129,7 +129,7 @@ $('button.save-frame').on('click', function() {
   preview.addClass('preview');
   preview.append('<img src=' + image.src + '>');
   $('.view-saved-frames').append(preview);
-  $('saved-frames-count').text(framesSaved);
+  $('.saved-frames-count').text(framesSaved);
   setPreviousFrame();
   saveToAllFrames();
   clearCurrentFrame();
@@ -172,7 +172,7 @@ $('button.see-all-frames').on('click', function() {
   var gbMultiplier = 120;
   var gbColor;
   var length = allFrames.length;
-  for (var i = 0; i < allFrames.length; i++) {
+  for (var i = 0; i < length; i++) {
     gbColor = (gbMultiplier * (1 - i / length) ) + 100;
     redraw(allFrames[i], rgbToHex(255, gbColor, gbColor));
   }
