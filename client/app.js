@@ -150,6 +150,7 @@ $('button.reset').on('click', function() {
   clearCurrentFrame();
   currentFrameID = 1;
   framesSaved = 0;
+  allFrames = [];
   $('.count-saved-frames').text(framesSaved);
   $('.view-saved-frames').empty();
 });
