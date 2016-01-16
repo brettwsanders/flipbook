@@ -26,10 +26,6 @@ var addClick = function (x, y, dragging) {
   currentFrame.clickX.push(x);
   currentFrame.clickY.push(y);
   currentFrame.clickDrag.push(dragging);
-  // console.log('Current Frame is: ');
-  // console.log(' clickX: ', currentFrame.clickX);
-  // console.log(' clickY: ', currentFrame.clickY);
-  // console.log(' clickDrag: ', currentFrame.clickDrag);
 };
 
 var redraw = function (frame, style) {
