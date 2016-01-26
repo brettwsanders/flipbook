@@ -118,9 +118,9 @@ $('button.save-frame').on('click', function() {
   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
   redraw(currentFrame);
   var image = new Image();
-  image.src = canvas.toDataURL("image/png");
+  image.src = canvas.toDataURL('image/png');
   framesSaved++;
-  localStorage.setItem("frame" + framesSaved, image.src);
+  localStorage.setItem('frame' + framesSaved, image.src);
   var preview = $('<div></div>');
   preview.addClass('preview');
   preview.append('<img src=' + image.src + '>');
